@@ -1,0 +1,91 @@
+body{
+    margin: 50px;
+ background-image: radial-gradient(circle, rgba(247, 25, 136, 1) 0%, rgba(255, 38, 0, 1) 100%);
+
+}
+
+img{
+    padding: 20px;
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgb(244, 244, 244)10%, rgb(17, 0, 250)100%);
+}
+
+.imagen-main{
+
+    display: flex;
+    justify-content: center; 
+
+}
+
+h1{
+    width: 300px;
+    text-align: center;
+    color: white;
+    font-family:console, sans-serif;
+    font-size: 70px;
+    transform: rotate(5deg);
+    text-shadow: 5px 5px 10px black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro{
+    background: black;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.navegacion{
+    font-size: 30px;
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navegacion li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navegacion a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius:10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a:link{
+    background-color: rgb(25, 255, 201);
+    color: white;
+    text-decoration: none;
+    padding: 2px;
+}
+a:visited{
+    background-color: rgb(255, 0, 234);
+    color: white;
+    text-decoration: none;
+    padding: 2px;
+}
+
+a:hover{
+    background-color: transparent;
+    color: black;
+    text-decoration: underline;
+    padding: 2px;
+}
+
+a:active{
+    color: red;
+    text-decoration: none;
+    padding: 2px;
+}
+
+.apple, .chocolate, .fresa{
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
