@@ -1,0 +1,17 @@
+{
+  "name": "csswwizzarddry-grids",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass csswizardry-grids.scss csswizardry-grids.css",
+    "sass:watch": "sass --watch csswizardry-grids.scss:csswizardry-grids.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}

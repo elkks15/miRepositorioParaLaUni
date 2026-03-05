@@ -1,0 +1,274 @@
+/* ================================
+   ESTILOS GLOBALES
+   ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.6;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 3em;
+    color: #667eea;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 1.3em;
+    color: #666;
+}
+
+/* ================================
+   SECCIONES
+   ================================ */
+section {
+    background: white;
+    padding: 40px 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    font-size: 2.2em;
+    color: #667eea;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+section h3 {
+    font-size: 1.5em;
+    color: #764ba2;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.instruccion {
+    background: #fff3cd;
+    padding: 15px;
+    border-left: 4px solid #ffc107;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+/* ================================
+   CAPACIDADES - FEATURES
+   ================================ */
+.feature {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.feature p {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* ================================
+   DEMO SECTIONS
+   ================================ */
+.demo-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.box {
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.box:hover {
+    transform: scale(1.02);
+}
+
+.box strong {
+    display: block;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.box code {
+    display: block;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.box small {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85em;
+    opacity: 0.9;
+}
+
+.box p {
+    margin-top: 10px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Colores para diferentes cajas */
+.box-header { background: linear-gradient(135deg, #667eea, #764ba2); }
+.box-nav { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.box-main { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.box-sidebar { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+.box-gallery1 { background: linear-gradient(135deg, #fa709a, #fee140); }
+.box-gallery2 { background: linear-gradient(135deg, #30cfd0, #330867); }
+.box-gallery3 { background: linear-gradient(135deg, #a8edea, #fed6e3); }
+.box-gallery4 { background: linear-gradient(135deg, #ff9a9e, #fecfef); }
+.box-footer1 { background: linear-gradient(135deg, #ffecd2, #fcb69f); }
+.box-footer2 { background: linear-gradient(135deg, #ff6e7f, #bfe9ff); }
+.box-footer3 { background: linear-gradient(135deg, #e0c3fc, #8ec5fc); }
+
+/* ================================
+   CÓDIGO DE REFERENCIA
+   ================================ */
+.code-block {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 25px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+.code-block h4 {
+    color: #50fa7b;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.code-block ul {
+    list-style: none;
+}
+
+.code-block li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.code-block li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #ff79c6;
+}
+
+.code-block code {
+    background: rgba(98, 114, 164, 0.3);
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #8be9fd;
+    font-size: 0.95em;
+}
+
+.code-block p {
+    margin-top: 15px;
+    color: #f1fa8c;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+.footer-info {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer-info p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .header p {
+        font-size: 1em;
+    }
+    
+    section h2 {
+        font-size: 1.6em;
+    }
+    
+    .box {
+        min-height: 120px;
+        padding: 20px 15px;
+    }
+    
+    .wrapper {
+        padding: 10px;
+    }
+}

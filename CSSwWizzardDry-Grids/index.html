@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Wizardry Grids</title>
+    <link rel="stylesheet" href="csswizardry-grids.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+ 
+        <header class="header">
+            <h1>CSS Wizardry Grids</h1>
+            <p>Sistema de Grid Flexible y Responsive</p>
+        </header>
+        <section class="capacidades">
+            <h2>Capacidades del Sistema</h2>
+            <div class="grid"><!--
+                --><div class="grid__item one-quarter palm--one-half">
+                    <div class="feature">
+                        <h3>Filas y Columnas</h3>
+                        <p>Organiza contenido en grids flexibles</p>
+                    </div>
+                </div><!--
+                --><div class="grid__item one-quarter palm--one-half">
+                    <div class="feature">
+                        <h3>Responsive</h3>
+                        <p>Se adapta a cualquier dispositivo</p>
+                    </div>
+                </div><!--
+                --><div class="grid__item one-quarter palm--one-half">
+                    <div class="feature">
+                        <h3>Porcentajes</h3>
+                        <p>Basado en fracciones (50%, 33%, 25%)</p>
+                    </div>
+                </div><!--
+                --><div class="grid__item one-quarter palm--one-half">
+                    <div class="feature">
+                        <h3>Reutilizable</h3>
+                        <p>Clases simples y fáciles de usar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="ejemplo-principal">
+            <h2>Ejemplos</h2>
+        
+
+            <div class="demo-section">
+                <h3>Header (50% - 50%)</h3>
+                <div class="grid"><!--
+                    --><div class="grid__item one-half palm--one-whole">
+                        <div class="box box-header">
+                            <strong>Logo</strong>
+                            <code>one-half</code>
+                            <small>50% escritorio | 100% móvil</small>
+                        </div>
+                    </div><!--
+                    --><div class="grid__item one-half palm--one-whole">
+                        <div class="box box-nav">
+                            <strong>Navegación</strong>
+                            <code>one-half palm--one-whole</code>
+                            <small>50% escritorio | 100% móvil</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h3>Contenido (66% - 33%)</h3>
+                <div class="grid"><!--
+                    --><div class="grid__item two-thirds palm--one-whole">
+                        <div class="box box-main">
+                            <strong>Contenido Principal</strong>
+                            <code>two-thirds</code>
+                            <small>66.66% escritorio | 100% móvil</small>
+                            <p>Esta es la sección principal donde va el contenido más importante. Ocupa 2/3 del ancho en desktop.</p>
+                        </div>
+                    </div><!--
+                    --><div class="grid__item one-third palm--one-whole">
+                        <div class="box box-sidebar">
+                            <strong>Sidebar</strong>
+                            <code>one-third palm--one-whole</code>
+                            <small>33.33% escritorio | 100% móvil</small>
+                            <p>Barra lateral con información complementaria.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h3>Galería (25% cada una)</h3>
+                <div class="grid"><!--
+                    --><div class="grid__item one-quarter palm--one-half">
+                        <div class="box box-gallery1">
+                            <strong>Imagen 1</strong>
+                            <code>one-quarter</code>
+                            <small>25% desktop<br>50% móvil</small>
+                        </div>
+                    </div><!--
+                    --><div class="grid__item one-quarter palm--one-half">
+                        <div class="box box-gallery2">
+                            <strong>Imagen 2</strong>
+                            <code>one-quarter</code>
+                            <small>25% desktop<br>50% móvil</small>
+                        </div>
+                    </div><!--
+                    --><div class="grid__item one-quarter palm--one-half">
+                        <div class="box box-gallery3">
+                            <strong>Imagen 3</strong>
+                            <code>one-quarter</code>
+                            <small>25% desktop<br>50% móvil</small>
+                        </div>
+                    </div><!--
+                    --><div class="grid__item one-quarter palm--one-half">
+                        <div class="box box-gallery4">
+                            <strong>Imagen 4</strong>
+                            <code>one-quarter</code>
+                            <small>25% desktop<br>50% móvil</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h3>Footer (33% cada una)</h3>
+                <div class="grid"><!--
+                    --><div class="grid__item one-third palm--one-whole">
+                        <div class="box box-footer1">
+                            <strong>Columna 1</strong>
+                            <code>one-third</code>
+                            <small>33.33% desktop | 100% móvil</small>
+                        </div>
+                    </div><!--
+                    --><div class="grid__item one-third palm--one-whole">
+                        <div class="box box-footer2">
+                            <strong>Columna 2</strong>
+                            <code>one-third</code>
+                            <small>33.33% desktop | 100% móvil</small>
+                        </div>
+                    </div><!--
+                    --><div class="grid__item one-third palm--one-whole">
+                        <div class="box box-footer3">
+                            <strong>Columna 3</strong>
+                            <code>one-third</code>
+                            <small>33.33% desktop | 100% móvil</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="codigo-referencia">
+            <h2>Clases Disponibles</h2>
+            <div class="grid"><!--
+                --><div class="grid__item one-half palm--one-whole">
+                    <div class="code-block">
+                        <h4>Fracciones</h4>
+                        <ul>
+                            <li><code>one-whole</code> → 100%</li>
+                            <li><code>one-half</code> → 50%</li>
+                            <li><code>one-third</code> → 33.33%</li>
+                            <li><code>two-thirds</code> → 66.66%</li>
+                            <li><code>one-quarter</code> → 25%</li>
+                            <li><code>three-quarters</code> → 75%</li>
+                        </ul>
+                    </div>
+                </div><!--
+                --><div class="grid__item one-half palm--one-whole">
+                    <div class="code-block">
+                        <h4>Modificadores Responsive</h4>
+                        <ul>
+                            <li><code>palm--*</code> → Móvil (< 768px)</li>
+                            <li><code>lap--*</code> → Tablet (768px - 1023px)</li>
+                            <li><code>desk--*</code> → Desktop (> 1024px)</li>
+                        </ul>
+                        <p><strong>Ejemplo:</strong><br><code>one-third palm--one-whole</code></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO FINAL -->
+        <footer class="footer-info">
+            <p><strong>CSS Wizardry Grids</strong> - Sistema ligero, flexible y fácil de usar</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
