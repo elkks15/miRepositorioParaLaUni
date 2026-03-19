@@ -1,0 +1,19 @@
+{
+  "name": "mirepositorioparalauni",
+  "version": "1.0.0",
+  "description": "trabajos para la uni para la materia de desarrollo web",
+  "main": "server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elkks15/miRepositorioParaLaUni.git"
+  },
+  "author": "EduardoOropeza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elkks15/miRepositorioParaLaUni/issues"
+  },
+  "homepage": "https://github.com/elkks15/miRepositorioParaLaUni#readme"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "frontbackend",
+  "version": "1.0.0",
+  "main": "public/server.js",
+  "scripts": {
+    "start": "nodemon public/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "EduardoOropeza",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
