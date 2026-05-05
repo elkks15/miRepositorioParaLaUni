@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/elkks15/miRepositorioParaLaUni/issues"
   },
-  "homepage": "https://github.com/elkks15/miRepositorioParaLaUni#readme"
+  "homepage": "https://github.com/elkks15/miRepositorioParaLaUni#readme",
+  "dependencies": {
+    "mongoose": "^9.3.1"
+  }
 }

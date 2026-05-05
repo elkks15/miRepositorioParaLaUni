@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Downloads/Supabase-Authentication-with-Node.js-Easy-Login-Signup-Tutorial-main"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#bacba3",
+			"activityBar.background": "#bacba3",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#5c85a3",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"commandCenter.border": "#15202b99",
+			"sash.hoverBorder": "#bacba3",
+			"statusBar.background": "#a2b883",
+			"statusBar.foreground": "#15202b",
+			"statusBarItem.hoverBackground": "#8aa563",
+			"statusBarItem.remoteBackground": "#a2b883",
+			"statusBarItem.remoteForeground": "#15202b",
+			"titleBar.activeBackground": "#a2b883",
+			"titleBar.activeForeground": "#15202b",
+			"titleBar.inactiveBackground": "#a2b88399",
+			"titleBar.inactiveForeground": "#15202b99"
+		},
+		"peacock.color": "#a2b883"
+	}
+}

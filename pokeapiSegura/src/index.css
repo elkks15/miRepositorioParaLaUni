@@ -1,0 +1,156 @@
+:root {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+  color: #0f1419;
+  background: #e8f4fc;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+a {
+  color: #0c4a6e;
+}
+a:hover {
+  text-decoration: underline;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background: #0284c7;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+button:hover {
+  background: #0369a1;
+}
+button.ghost {
+  background: #64748b;
+}
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background: #0c4a6e;
+  color: #e0f2fe;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.topbar nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.topbar a {
+  color: #bae6fd;
+  text-decoration: none;
+  font-weight: 500;
+}
+.topbar a:hover {
+  color: #fff;
+}
+main {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+h1,
+h2 {
+  margin: 0 0 0.75rem 0;
+}
+ul.pokemon-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+ul.pokemon-grid a {
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  background: #f0f9ff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+ul.pokemon-grid a:hover {
+  background: #dbeafe;
+}
+.centro {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.centro .card {
+  max-width: 360px;
+  margin: 0 auto;
+}
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+input[type="text"],
+input[type="password"],
+input[type="search"] {
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+}
+.error {
+  color: #b91c1c;
+  font-size: 0.9rem;
+}
+.badge {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #075985;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin: 0.1rem 0.2rem 0.1rem 0;
+  font-size: 0.8rem;
+}
+.img-wrap {
+  text-align: center;
+}
+.img-wrap img {
+  max-width: 220px;
+  image-rendering: auto;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.block {
+  display: block;
+  margin: 0.3rem 0 0.6rem 0;
+}
