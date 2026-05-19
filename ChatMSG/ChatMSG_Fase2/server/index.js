@@ -1,3 +1,8 @@
+/**
+ * Fase 2 — La comunicación en tiempo real entre varias instancias Node es
+ * obligatoria vía Redis: @socket.io/redis-adapter (pub/sub). Sin Redis el
+ * proceso no arranca. Las sesiones (cookie httpOnly) usan connect-redis.
+ */
 import express from "express";
 import session from "express-session";
 import { createServer } from "http";
@@ -61,18 +66,39 @@ function sanitizeUsername(raw) {
   return s;
 }
 
+
 function pushMessage(entry) {
   messages.push(entry);
   while (messages.length > MAX_MESSAGES) messages.shift();
 }
 
+function exitOnRedisError(context) {
+  return (err) => {
+    console.error(`Redis (${context}) — conexión obligatoria para Fase 2:`, err);
+    process.exit(1);
+  };
+}
+
+async function assertRedisPing(client, label) {
+  const r = await client.ping();
+  if (r !== "PONG") {
+    throw new Error(`Redis ${label}: se esperaba PONG, recibí ${String(r)}`);
+  }
+}
+
 async function bootstrap() {
   const sessionRedis = createClient({ url: REDIS_URL });
+  sessionRedis.on("error", exitOnRedisError("sesiones"));
   await sessionRedis.connect();
+  await assertRedisPing(sessionRedis, "sesiones");
 
   const pubClient = createClient({ url: REDIS_URL });
+  pubClient.on("error", exitOnRedisError("socket.io-pub"));
   const subClient = pubClient.duplicate();
+  subClient.on("error", exitOnRedisError("socket.io-sub"));
   await Promise.all([pubClient.connect(), subClient.connect()]);
+  await assertRedisPing(pubClient, "socket.io-pub");
+  await assertRedisPing(subClient, "socket.io-sub");
 
   const sessionMiddleware = session({
     store: new RedisStore({
@@ -103,11 +129,36 @@ async function bootstrap() {
     }
   });
 
-  io.adapter(createAdapter(pubClient, subClient));
+  const redisAdapter = createAdapter(pubClient, subClient);
+  io.adapter(redisAdapter);
   io.engine.use(sessionMiddleware);
 
-  app.get("/api/health", (_req, res) => {
-    res.json({ ok: true, port: PORT, instance: String(PORT) });
+  console.log(
+    `Redis OK — adaptador Socket.IO: ${redisAdapter.constructor?.name ?? "RedisAdapter"} (pub/sub entre nodos)`
+  );
+
+  app.get("/api/health", async (_req, res) => {
+    try {
+      const t0 = Date.now();
+      await sessionRedis.ping();
+      const pingMs = Date.now() - t0;
+      res.json({
+        ok: true,
+        port: PORT,
+        instance: String(PORT),
+        redis: {
+          required: true,
+          chatRelay: "@socket.io/redis-adapter (pub/sub; sin esto no hay clúster)",
+          sessions: "connect-redis",
+          pingMs
+        }
+      });
+    } catch {
+      res.status(503).json({
+        ok: false,
+        error: "Redis no responde; Fase 2 no puede operar sin él."
+      });
+    }
   });
 
   app.get("/api/session", (req, res) => {
